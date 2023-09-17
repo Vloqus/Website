@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love you remy <3 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #FF6B6B, #FF4848);
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #text-container {
+            margin: 50px;
+            font-size: 24px;
+        }
+        #change-button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #FF3030;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        #change-button:hover {
+            background-color: #FF4848;
+        }
+    </style>
+</head>
+<body>
+    <h1>For when I cant be there for you</h1>
+    <div id="poem-container">
+        <!-- Poem will be displayed here -->
+    </div>
+    <button id="generate-button">Reassure me</button>
+
+    <script>
+        // List of poems
+        const poems = [
+            "Remas, you're not just my best friend; you're also the tiniest and cutest bundle of joy in my life. Your petite stature adds to your charm, making you even more adorable.",
+            "I can't help but smile every time I see you, Remas. You're the tiniest package of awesomeness and cuteness, and it's impossible not to be completely charmed by you.",
+            "Remas, your smile is like a radiant sunrise, filling the world with warmth and brightness. It's an instant mood lifter and a reminder of the beauty in every moment.",
+            "Your smile is like a secret language, Remas. It conveys warmth, understanding, and a genuine connection that words alone can't express. It's a true reflection of your beautiful soul.",
+            "Remas, your friendship is a treasure that I hold dear. Your presence in my life brings immeasurable joy, laughter, and a profound sense of connection. Your friendship enriches my life in countless ways, and I'm grateful for every moment we shared and will share together.",
+            "Remas, you're a fantastic listener. Your ability to empathize and provide support is a testament to your caring nature.",
+            "Your energy is infectious, and it's impossible not to feel invigorated and motivated when you're around. You have a way of lifting everyone's spirits.",
+            "Remas, words can't fully express how much I love and care about you. Your presence in my life is a source of immense joy and comfort.",
+            "Every day, my love for you grows stronger. You are the most beautiful part of my world, both inside and out.",
+            "My love for you is like a river that never stops flowing. It's constant, deep, and unwavering.",
+            "Your beauty is a work of art, and I'm privileged to admire it . You're the definition of perfection in my eyes.",
+            "I care about you more than words can say, Remas. Your well-being is always at the forefront of my thoughts.",
+            "Your beauty is not just physical, Remas; it's the kindness and compassion you show to others that truly make you shine.",
+            "Your beauty is a light that never goes out, Remas. It illuminates my life and brings warmth to my soul.",
+            "Your beauty, Remas, is like a star in the night sky, shining brightly and guiding me through life's journey.",
+            "I care about you deeply, Remas, and I'll always be here to love, support, and admire the incredible person that you are.",
+            "Remas, your beauty is like a rare gem that sparkles in a sea of stones. You stand out in every way.",
+            "Every time I look into your eyes, I'm reminded of the depth of my feelings for you. They are the windows to your beautiful soul.",
+            "Remas, you are the sunshine in my life. Your smile has the power to dispel any darkness that may come our way.",
+            "Your presence in my life is a blessing that I never take for granted. I am truly fortunate to have you by my side.",
+            "Your smile is like a masterpiece, a work of art that brightens the world and warms my heart.",
+            "I care about you deeply, Remas. Your joys and sorrows are mine as well, and I'll always be here to share them with you.",
+            // Add more poems to the list
+        ];
+
+        const poemContainer = document.getElementById("poem-container");
+        const generateButton = document.getElementById("generate-button");
+
+        generateButton.addEventListener("click", () => {
+            // Generate a random index to select a poem from the list
+            const randomIndex = Math.floor(Math.random() * poems.length);
+            
+            // Display the selected poem in the poem container
+            poemContainer.textContent = poems[randomIndex];
+        });
+    </script>
+</body>
+</html>
